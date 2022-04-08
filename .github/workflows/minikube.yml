@@ -19,5 +19,5 @@ jobs:
         run: kubectl get nodes
       - name: Deploy to minikube and list
         run:
-           kubectl apply -f deployment.yaml
-           kubectl get pods, svc --all-namespaces
+           -- kubectl apply -f deployment.yaml
+           -- kubectl get pods, svc --all-namespaces

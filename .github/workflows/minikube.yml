@@ -20,7 +20,3 @@ jobs:
       - name: Deploy to minikube
         run:
            kubectl apply -f deployment.yaml
-           
-      - name: List services
-        run:
-          kubectl get pods, svc --all-namespaces

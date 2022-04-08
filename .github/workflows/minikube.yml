@@ -17,7 +17,10 @@ jobs:
           github token: ${{ secrets.LOGIN_TOKEN }}
       - name: Interact with the cluster
         run: kubectl get nodes
-      - name: Deploy to minikube and list
+      - name: Deploy to minikube
         run:
-           -- kubectl apply -f deployment.yaml
-           -- kubectl get pods, svc --all-namespaces
+           kubectl apply -f deployment.yaml
+           
+      - name: List services
+        run:
+          kubectl get pods, svc --all-namespaces
